@@ -1,0 +1,72 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Mako",
+  "version": "1.2.0",
+  "identifier": "ai.marswave.mako",
+  "build": {
+    "frontendDist": "../dist-tauri",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeDevCommand": "npm run dev:tauri-renderer",
+    "beforeBuildCommand": "npm run build:tauri-renderer"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Mako",
+        "width": 960,
+        "height": 720,
+        "minWidth": 600,
+        "minHeight": 400,
+        "resizable": true,
+        "fullscreen": false,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true,
+        "trafficLightPosition": {
+          "x": 16,
+          "y": 16
+        }
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "app",
+    "category": "Productivity",
+    "publisher": "marswave.ai",
+    "copyright": "Copyright © 2024-2026 marswave.ai",
+    "shortDescription": "The agent-native Markdown editor.",
+    "longDescription": "Mako is an agent-native Markdown editor with live file watching, workspace navigation, autosave, themes, and PDF export.",
+    "fileAssociations": [
+      {
+        "ext": [
+          "md"
+        ],
+        "name": "Markdown Document",
+        "role": "Editor",
+        "mimeType": "text/markdown"
+      },
+      {
+        "ext": [
+          "markdown"
+        ],
+        "name": "Markdown Document",
+        "role": "Editor",
+        "mimeType": "text/markdown"
+      }
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "13.0"
+    }
+  }
+}
